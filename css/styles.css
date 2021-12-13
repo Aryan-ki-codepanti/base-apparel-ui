@@ -1,3 +1,4 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +6,7 @@
     font-family: var(--Family);
 }
 
+/* Custom Properties */
 :root {
     --Family: "Josefin Sans", sans-serif;
 
@@ -42,10 +44,90 @@
     --Font-size: 16px;
 }
 
+/* Body */
+body{
+    background-image: url(../images/bg-pattern-desktop.svg);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-size: 100% 100%;
+    min-height: 100vh;
+}
+
+/* Main grid */
+.grid{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas: "hero-left hero-right";
+    background: var(--Linear-gradient-1);
+}
+/* App Left */
+.app__left{
+    grid-area: hero-left;
+}
+
+
+.hero h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+}
+
+.hero h1:nth-of-type(1){
+    color: var(--Desaturated-Red);
+    font-weight: 300;
+}
+
+.hero p{
+    color: var(--Desaturated-Red);
+    line-height: 1.5;
+}
+
+/* Form */
+
+.email-box{
+    position: relative;
+    display: flex;
+    align-items: stretch;
+}
+
+#email{
+    border-radius: 2rem;
+    font-style: 1.4rem;
+    padding: 0.6em 1.5em;
+    outline: none;
+    border: 1px solid var(--Desaturated-Red);
+    background: transparent;
+    color: var(--Desaturated-Red);
+}
+
+#submit-btn{
+    background: var(--Linear-gradient-2);
+    border: none;
+    padding-inline:  2em;
+    border-radius: 2rem;
+    cursor: pointer;
+    right: 0rem;
+    transform: translateX(-100%);
+}
+
+#submit-btn img{
+    width: 7px;
+}
+/* App Right */
+.app__right{
+    grid-area: hero-right;
+}
+.hero-image{
+    background-image: url(../images/hero-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size:  100vh;
+    min-height: 100vh;
+    object-fit: cover;
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
-    background: linear-gradient();
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
