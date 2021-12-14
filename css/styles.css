@@ -45,7 +45,7 @@
 }
 
 /* Body */
-body{
+body {
     background-image: url(../images/bg-pattern-desktop.svg);
     /* background-repeat: no-repeat; */
     background-size: cover;
@@ -54,7 +54,7 @@ body{
 }
 
 /* Main grid */
-.grid{
+.grid {
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-template-areas: "hero-left hero-right";
@@ -62,31 +62,31 @@ body{
     /* gap: 5em; */
 }
 /* App Left */
-.app__left{
+.app__left {
     grid-area: hero-left;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.content{
+.content {
     max-width: 500px;
+    padding-block: 2em;
 }
 
-
-.hero h1{
+.hero h1 {
     font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 0.25em;
 }
 
-.hero h1:nth-of-type(1){
+.hero h1:nth-of-type(1) {
     margin-top: 2em;
     color: var(--Desaturated-Red);
     font-weight: 300;
 }
 
-.hero p{
+.hero p {
     color: var(--Desaturated-Red);
     line-height: 1.5;
     margin-block: 2em;
@@ -94,13 +94,13 @@ body{
 
 /* Form */
 
-.email-box{
+.email-box {
     position: relative;
     display: flex;
     align-items: stretch;
 }
 
-#email{
+#email {
     border-radius: 2rem;
     font-size: 1.2rem;
     padding: 0.6em 1.5em;
@@ -112,29 +112,37 @@ body{
     max-width: 400px;
 }
 
-#submit-btn{
+#submit-btn {
     background: var(--Linear-gradient-2);
     border: none;
-    padding-inline:  3em;
+    padding-inline: 3em;
     border-radius: 2rem;
     cursor: pointer;
     right: 0rem;
     transform: translateX(-100%);
 }
 
-#submit-btn img{
+#submit-btn img {
     width: 13px;
 }
 /* App Right */
-.app__right{
+.app__right {
     grid-area: hero-right;
 }
-.hero-image{
+.hero-image {
     background-image: url(../images/hero-desktop.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100vh;
     min-height: 100vh;
     object-fit: cover;
+}
+
+/* Footer and attribution */
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .attribution {
@@ -143,4 +151,10 @@ body{
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-height: 600px) {
+    footer {
+        position: static;
+    }
 }
